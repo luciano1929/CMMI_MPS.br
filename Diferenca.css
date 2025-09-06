@@ -1,0 +1,225 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.header, .footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #004d99;
+}
+
+.header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    gap: 30px;
+}
+
+.sidebar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #004d99;
+    font-size: 1.5em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    padding: 10px 15px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.main-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.topic-section {
+    margin-bottom: 40px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.topic-section h2 {
+    color: #004d99;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.content-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.level-card {
+    background-color: #f9f9f9;
+    border-left: 5px solid #004d99;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.level-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    margin-top: 30px;
+}
+
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #f2f2f2;
+    color: #004d99;
+    font-weight: bold;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.comparison-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.diferencas {
+    text-align: center; /* Centraliza a imagem na horizontal */
+    margin-top: 20px;
+}
+
+.diferencas img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        margin-bottom: 20px;
+    }
+    .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table td {
+        display: block;
+        width: 100%;
+    }
+    .comparison-table thead {
+        display: none;
+    }
+    .comparison-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .comparison-table td {
+        text-align: right;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+    }
+    .comparison-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
